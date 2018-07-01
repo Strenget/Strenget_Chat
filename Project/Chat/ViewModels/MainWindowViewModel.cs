@@ -1,4 +1,5 @@
-﻿using Caliburn.Micro;
+﻿using System.Net.Mime;
+using Caliburn.Micro;
 using Castle.Core.Logging;
 
 namespace Chat.ViewModels
@@ -7,6 +8,8 @@ namespace Chat.ViewModels
 	{
 		private readonly IWindowManager _windowManager;
 		private string _text;
+		private string _text1;
+
 
 		public MainWindowViewModel(
 			IWindowManager windowManager)
@@ -28,5 +31,29 @@ namespace Chat.ViewModels
 				}
 			}
 		}
+
+		public string Text1
+		{
+			get { return _text1; }
+			set
+			{
+				if (_text1 != value)
+				{
+					_text1 = value;
+					NotifyOfPropertyChange(() => Text1);
+				}
+			}
+		}
+
+		public void ChangeText()
+		{
+			NotifyOfPropertyChange( () => Text);
+		}
+		public void ChangeText1()
+		{
+			NotifyOfPropertyChange(() => Text1);
+		}
+
+
 	}
 }

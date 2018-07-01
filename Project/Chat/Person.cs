@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Chat
 {
-    class Person
+    public class Person
     {
         // обьявляем переменные
-        private string Name;
+        public string Name;
         private int Age;
         private string Country;
         private string City;
@@ -25,7 +25,6 @@ namespace Chat
             City = city;
             Aducation = aducation;
             Language = language;
-
         }
     }
 }

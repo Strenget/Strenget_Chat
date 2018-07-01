@@ -87,8 +87,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BussinesLayer\Client.cs" />
-    <Compile Include="BussinesLayer\Server.cs" />
+    <Compile Include="BussinesLayer\UdpSocket.cs" />
     <Compile Include="Installers\Installer.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
